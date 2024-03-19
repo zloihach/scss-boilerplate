@@ -226,6 +226,18 @@ svg * {
   }
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-accent);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark); /* цвет бегунка */
+}
+
 body {
   font-size: clamp(16px, 1.25vw, 18px);
   font-family: var(--font-family-base);
