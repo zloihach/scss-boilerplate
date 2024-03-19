@@ -258,6 +258,30 @@ h4, .h4 {
   font-size: clamp(18px, 1.3888888889vw, 20px);
 }
 
+.mobile-overlay {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border: none;
+  padding: 14px 20px;
+}
+.mobile-overlay:modal {
+  max-width: 100%;
+  max-height: 100%;
+}
+.mobile-overlay__close-button-wrapper {
+  display: flex;
+  justify-content: end;
+}
+.mobile-overlay__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+  min-height: 80vh;
+}
+
 .burger-button {
   padding: 0;
   background-color: transparent;
@@ -288,6 +312,42 @@ h4, .h4 {
   background-color: var(--color-dark);
   border-radius: 5px;
   box-shadow: 0px -8px, 0px 8px;
+}
+
+.cross-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 48px;
+  aspect-ratio: 1;
+  position: relative;
+  border-radius: var(--border-radius-small);
+}
+@media (hover: hover) {
+  .cross-button:hover {
+    background-color: var(--color-accent);
+  }
+}
+@media (hover: none) {
+  .cross-button:active {
+    background-color: var(--color-accent);
+  }
+}
+.cross-button::before, .cross-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  width: 70%;
+  height: 2px;
+  background-color: var(--color-dark);
+  border-radius: 5px;
+}
+.cross-button::before {
+  rotate: 45deg;
+}
+.cross-button::after {
+  rotate: -45deg;
 }
 
 .button {
