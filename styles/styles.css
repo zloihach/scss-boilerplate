@@ -229,6 +229,11 @@ svg * {
 body::-webkit-scrollbar {
   width: 12px;
 }
+@media (max-width: 767px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
 
 body::-webkit-scrollbar-track {
   background: var(--color-accent);

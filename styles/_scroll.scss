@@ -1,5 +1,8 @@
 body::-webkit-scrollbar {
   width: 12px;
+  @include mobile{
+    display: none;
+  }
 }
 
 body::-webkit-scrollbar-track {
