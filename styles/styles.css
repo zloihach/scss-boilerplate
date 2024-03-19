@@ -184,6 +184,16 @@ svg * {
   --button-height: 68px;
   --transition-duration: .2s;
 }
+@media (max-width: 1280px) {
+  :root {
+    --section-padding-y: 50px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --section-padding-y: 30px;
+  }
+}
 
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
@@ -528,6 +538,19 @@ h4, .h4 {
   display: flex;
   justify-content: space-between;
   column-gap: 37px;
+}
+@media (max-width: 1023px) {
+  .hero__partners-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+  }
+}
+@media (max-width: 1023px) {
+  .hero__partners-item {
+    display: flex;
+    justify-content: center;
+  }
 }
 .hero__partners-image {
   filter: grayscale(1);
