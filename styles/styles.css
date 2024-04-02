@@ -1084,9 +1084,24 @@ h4, .h4 {
 .team-card__info {
   align-self: end;
 }
+.team-card__info:not(:last-child) {
+  margin-right: 10px;
+}
 .team-card__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  aspect-ratio: 1;
   margin-left: auto;
   align-self: start;
+  color: var(--color-accent);
+  background-color: var(--color-dark);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.team-card__name:not(:last-child) {
+  margin-bottom: 3px;
 }
 
 /*# sourceMappingURL=styles.css.map */

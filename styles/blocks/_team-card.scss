@@ -17,10 +17,25 @@
 
   &__info{
     align-self: end;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
   }
 
   &__link{
+    @include flex-center;
+    @include square(34px);
     margin-left: auto;
     align-self: start;
+    color: var(--color-accent);
+    background-color: var(--color-dark);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &__name{
+    &:not(:last-child){
+      margin-bottom: 3px;
+    }
   }
 }
