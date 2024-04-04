@@ -1,0 +1,18 @@
+.reviews{
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  row-gap: 124px;
+  padding-top: 84px;
+  padding-bottom: 68px;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  border-radius: var(--border-radius-large);
+
+  .reviews__slider{
+    &-list{
+      display:flex;
+      column-gap:50px;
+    }
+  }
+}
