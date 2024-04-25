@@ -9,7 +9,9 @@
   background-color: var(--color-dark);
   border-radius: var(--border-radius-large);
 
-  .reviews__slider {
+  &__slider {
+    --reviewsSliderSlideWidth: 606px;
+
     &-list {
       display: flex;
       column-gap: 50px;
@@ -19,7 +21,37 @@
 
     &-item {
       scroll-snap-align: start;
-      min-width: 606px;
+      min-width: var(--reviewsSliderSlideWidth);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 564px;
+    margin-inline: auto;
+  }
+
+  &__arrow-button{
+    @include reset-button;
+    @include flex-center;
+    @include square(48px);
+
+    color: var(--color-light);
+
+    @include hover{
+      color: var(--color-accent);
+    }
+
+    &[disabled]{
+      color: var(--color-gray-alt);
+      cursor: not-allowed;
+    }
+
+    svg{
+      @include square(20px)
     }
   }
 }
